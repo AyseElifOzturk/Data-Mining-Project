@@ -20,6 +20,18 @@ print("\n%50'den fazla eksik veri içeren sütunlar:\n", columns_to_drop)
 df_cleaned = df.drop(columns=columns_to_drop)
 print("\n%50'den fazla eksik veri içeren sütunlar kaldırıldı.")
 
+# %50'den az eksik veri olan sütunları doldurma
+for column in df_cleaned.columns:
+    if df_cleaned[column].isnull().sum() > 0:  # Eksik veri içeren sütunlar
+        if df_cleaned[column].dtype in ['float64', 'int64']:  # Sayısal sütunlar
+            median_value = df_cleaned[column].median()
+            df_cleaned[column] = df_cleaned[column].fillna(median_value)
+            print(f"{column} sütunu medyan değeri ({median_value}) ile dolduruldu.")
+        else:  # Kategorik sütunlar
+            mode_value = df_cleaned[column].mode()[0]
+            df_cleaned[column] = df_cleaned[column].fillna(mode_value)
+            print(f"{column} sütunu mod değeri ({mode_value}) ile dolduruldu.")
+
 # Temizlenmiş veri setinin genel bilgilerini görüntüleme
 print("\nTemizlenmiş veri seti bilgileri:")
 print(df_cleaned.info())
