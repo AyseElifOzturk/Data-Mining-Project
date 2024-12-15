@@ -10,7 +10,7 @@ print("Tüm kütüphaneler başarıyla yüklendi!")
 file_path = 'MushroomDataset/secondary_data.csv'
 df = pd.read_csv(file_path)
 
-# Veri setinin ilk birkaç satırını görüntüleyin
+# Veri setinin ilk birkaç satırına bakma
 print(df.head())
 # Eksik veri kontrolü
 print(df.isnull().sum())
