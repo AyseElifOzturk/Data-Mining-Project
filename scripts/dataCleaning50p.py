@@ -35,3 +35,8 @@ for column in df_cleaned.columns:
 # Temizlenmiş veri setinin genel bilgilerini görüntüleme
 print("\nTemizlenmiş veri seti bilgileri:")
 print(df_cleaned.info())
+
+# Temizlenmiş veri setini kaydetme
+output_path = 'MushroomDataset/cleanedMushroom.csv'
+df_cleaned.to_csv(output_path, index=False)
+print(f"\nTemizlenmiş veri seti '{output_path}' olarak kaydedildi.")
