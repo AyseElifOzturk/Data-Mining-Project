@@ -5,6 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import cross_val_score
 from sklearn.tree import plot_tree
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
 # Temizlenmiş veri setini yükleme
@@ -42,6 +43,13 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Karar Ağacı Modeli Doğruluğu: {accuracy:.2f}")
 print("\nSınıflandırma Raporu:")
 print(classification_report(y_test, y_pred, target_names=le_y.classes_))
+
+# Confusion Matrix
+cm = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=le_y.classes_)
+disp.plot(cmap=plt.cm.Blues)
+plt.title("Confusion Matrix")
+plt.show()
 
 # Çapraz doğrulama
 tuned_cv_scores = cross_val_score(clf, X, y, cv=10)  # 10 katlı çapraz doğrulama
