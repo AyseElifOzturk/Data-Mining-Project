@@ -1,0 +1,95 @@
+RangeIndex: 61069 entries, 0 to 61068
+Data columns (total 16 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   class                 61069 non-null  object 
+ 1   cap-diameter          61069 non-null  float64
+ 2   cap-shape             61069 non-null  object 
+ 3   cap-surface           61069 non-null  object 
+ 4   cap-color             61069 non-null  object 
+ 5   does-bruise-or-bleed  61069 non-null  object 
+ 6   gill-attachment       61069 non-null  object 
+ 7   gill-spacing          61069 non-null  object 
+ 8   gill-color            61069 non-null  object 
+ 9   stem-height           61069 non-null  float64
+ 10  stem-width            61069 non-null  float64
+ 11  stem-color            61069 non-null  object 
+ 12  has-ring              61069 non-null  object 
+ 13  ring-type             61069 non-null  object 
+ 14  habitat               61069 non-null  object 
+ 15  season                61069 non-null  object 
+dtypes: float64(3), object(13)
+memory usage: 7.5+ MB
+Sonuç
+(None,
+   class  cap-diameter cap-shape cap-surface cap-color does-bruise-or-bleed  \
+ 0     p         15.26         x           g         o                    f   
+ 1     p         16.60         x           g         o                    f   
+ 2     p         14.07         x           g         o                    f   
+ 3     p         14.17         f           h         e                    f   
+ 4     p         14.64         x           h         o                    f   
+ 
+   gill-attachment gill-spacing gill-color  stem-height  stem-width stem-color  \
+ 0               e            c          w        16.95       17.09          w   
+ 1               e            c          w        17.99       18.19          w   
+ 2               e            c          w        17.80       17.74          w   
+ 3               e            c          w        15.77       15.98          w   
+ 4               e            c          w        16.53       17.20          w   
+ 
+   has-ring ring-type habitat season  
+ 0        t         g       d      w  
+ 1        t         g       d      u  
+ 2        t         g       d      w  
+ 3        t         p       d      w  
+ 4        t         p       d      w  ,
+         class  cap-diameter cap-shape cap-surface cap-color  \
+ count   61069  61069.000000     61069       61069     61069   
+ unique      2           NaN         7          11        12   
+ top         p           NaN         x           t         n   
+ freq    33888           NaN     26934       22316     24218   
+ mean      NaN      6.733854       NaN         NaN       NaN   
+ std       NaN      5.264845       NaN         NaN       NaN   
+ min       NaN      0.380000       NaN         NaN       NaN   
+ 25%       NaN      3.480000       NaN         NaN       NaN   
+ 50%       NaN      5.860000       NaN         NaN       NaN   
+ 75%       NaN      8.540000       NaN         NaN       NaN   
+ max       NaN     62.340000       NaN         NaN       NaN   
+ 
+        does-bruise-or-bleed gill-attachment gill-spacing gill-color  \
+ count                 61069           61069        61069      61069   
+ unique                    2               7            3         12   
+ top                       f               a            c          w   
+ freq                  50479           22582        49773      18521   
+ mean                    NaN             NaN          NaN        NaN   
+ std                     NaN             NaN          NaN        NaN   
+ min                     NaN             NaN          NaN        NaN   
+ 25%                     NaN             NaN          NaN        NaN   
+ 50%                     NaN             NaN          NaN        NaN   
+ 75%                     NaN             NaN          NaN        NaN   
+ max                     NaN             NaN          NaN        NaN   
+ 
+          stem-height    stem-width stem-color has-ring ring-type habitat  \
+ count   61069.000000  61069.000000      61069    61069     61069   61069   
+ unique           NaN           NaN         13        2         8       8   
+ top              NaN           NaN          w        f         f       d   
+ freq             NaN           NaN      22926    45890     50832   44209   
+ mean        6.581538     12.149410        NaN      NaN       NaN     NaN   
+ std         3.370017     10.035955        NaN      NaN       NaN     NaN   
+ min         0.000000      0.000000        NaN      NaN       NaN     NaN   
+ 25%         4.640000      5.210000        NaN      NaN       NaN     NaN   
+ 50%         5.950000     10.190000        NaN      NaN       NaN     NaN   
+ 75%         7.740000     16.570000        NaN      NaN       NaN     NaN   
+ max        33.920000    103.910000        NaN      NaN       NaN     NaN   
+ 
+        season  
+ count   61069  
+ unique      4  
+ top         a  
+ freq    30177  
+ mean      NaN  
+ std       NaN  
+ min       NaN  
+ 25%       NaN  
+ 50%       NaN  
+ 75%       NaN  
+ max       NaN  )
